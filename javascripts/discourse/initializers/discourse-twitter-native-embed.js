@@ -1,5 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-
+import { i18n } from "discourse-i18n";
 
 export default {
     name: "discourse-twitter-native-embed",
@@ -30,7 +30,6 @@ export default {
                 }
                 for (const aa of el.querySelectorAll("aside.onebox.twitterstatus")) {
                     const twitter_blockquote = document.createElement("blockquote");
-                    twitter_blockquote.setAttribute("style", "display: none");
                     twitter_blockquote.classList?.add("twitter-tweet");
                     const aaa = document.createElement("a");
                     const href = aa.getAttribute("data-onebox-src").replaceAll("https://x.com", "https://twitter.com")
@@ -38,6 +37,10 @@ export default {
                     aaa.setAttribute("rel", "no-follow");
                     twitter_blockquote.appendChild(aaa);
                     aa.appendChild(twitter_blockquote);
+
+                    const loadingEl = document.createElement("p");
+                    loadingEl.innerHTML = i18n(themePrefix("loading_tweet"));
+                    twitter_blockquote.appendChild(loadingEl);
                     for (const oldEl of aa.querySelectorAll("header.source, article.onebox-body")) {
                         oldEl.setAttribute("style", "display: none");
                     }

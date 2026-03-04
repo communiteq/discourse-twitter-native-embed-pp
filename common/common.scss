@@ -1,5 +1,10 @@
-blockquote.twitter-tweet {
+.cooked blockquote.twitter-tweet {
   border: none;
   background: transparent;
   font-size: 0.8em;
+  margin: 0;
+  p {
+    padding: 0 !important;
+    margin-top: 0;
+  }
 }

@@ -1,2 +1,2 @@
 en:
-  loading_tweet: "A Tweet is loading.<br>If it doesn’t load, please disable your browser’s shields for X.com."
+  loading_tweet: 'A <a href="%{href}" target="_blank">Tweet</a> is loading.<br> If it doesn’t load, please disable your browser’s shields for X.com.'

@@ -39,7 +39,7 @@ export default {
                     aa.appendChild(twitter_blockquote);
 
                     const loadingEl = document.createElement("p");
-                    loadingEl.innerHTML = i18n(themePrefix("loading_tweet"));
+                    loadingEl.innerHTML = i18n(themePrefix("loading_tweet"), { href: href });
                     twitter_blockquote.appendChild(loadingEl);
                     for (const oldEl of aa.querySelectorAll("header.source, article.onebox-body")) {
                         oldEl.setAttribute("style", "display: none");

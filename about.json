@@ -1,9 +1,8 @@
 {
-  "name": "Twitter Native Embed",
-  "authors": "Lhc_fl",
-  "about_url": null,
+  "name": "Twitter Native Embed (PP)",
+  "authors": "Lhc_fl and Communiteq",
+  "version": "2026.03.16",
   "component": true,
-  "license_url": null,
   "assets": {},
   "color_schemes": {}
 }
